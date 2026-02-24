@@ -14,7 +14,7 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
         {
             title: "Web OS",
             tags: ["TailwindCss", "TypeScript", "React"],
-            repo: "https://github.com/leen012/WebOS"
+            repo: "https://github.com/aleezazahra/CatOs"
         },
         {
             title: "Hyprland Config",
