@@ -1,73 +1,29 @@
-# React + TypeScript + Vite
+# WebOS Portfolio – Flavortown Hackathon
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A WebOS-inspired interactive portfolio built with **React** for the **Flavortown Hackathon**. This portfolio features a retro OS interface, live weather display, and sections for projects, contact, and about me.
 
-Currently, two official plugins are available:
+![Portfolio Screenshot](./path-to-screenshot.jpg) <!-- Replace with your screenshot -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **WebOS-style interface:** Nostalgic desktop-like UI with icons and panels.
+- **Live Weather Display:** Shows current weather using OpenWeatherMap API.
+- **Dynamic Time Display:** Updates every 30 seconds.
+- **Interactive Sections:**
+  - **Projects:** Click the folder icon to view projects.
+  - **Contact:** Click the phone icon to view contact info.
+  - **About Me:** Click the user icon to learn more about the creator.
+- **Responsive Design:** Works on multiple screen sizes.
+- **Aesthetic UI:** Transparent panels with blur effects and hover interactions.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React** – Frontend framework
+- **Tailwind CSS** – Styling
+- **OpenWeatherMap API** – Live weather data
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
