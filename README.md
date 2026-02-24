@@ -2,8 +2,6 @@
 
 A WebOS-inspired interactive portfolio built with **React** for the **Flavortown Hackathon**. This portfolio features a retro OS interface, live weather display, and sections for projects, contact, and about me.
 
-![Portfolio Screenshot](./path-to-screenshot.jpg) <!-- Replace with your screenshot -->
-
 ---
 
 ## Features
@@ -27,3 +25,4 @@ A WebOS-inspired interactive portfolio built with **React** for the **Flavortown
 - **OpenWeatherMap API** – Live weather data
 
 ---
+Made for Flavortown hackathon
