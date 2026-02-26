@@ -36,7 +36,7 @@ const Contact = ({ onClose }: { onClose: () => void }) => {
   </a>
 
   <a 
-    href="https://github.com/aleezazahra01?tab=repositories" 
+    href="https://github.com/aleezazahra?tab=repositories" 
     target="_blank" 
     rel="noopener noreferrer"
   >
