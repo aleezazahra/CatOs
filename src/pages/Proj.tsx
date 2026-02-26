@@ -9,7 +9,7 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
         {
             title: "Pomodoro Timer",
             tags: ["React", "Tailwind", "Typescript"],
-            repo: "https://github.com/aleezazahra01/Pomodoro"
+            repo: "https://github.com/aleezazahra/Pomodoro"
         },
         {
             title: "Web OS",
@@ -19,7 +19,7 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
         {
             title: "Hyprland Config",
             tags: ["Lua", "Bash", "Wayland"],
-            repo: "https://github.com/aleezazahra01/hyprland-fedora"
+            repo: "https://github.com/aleezazahra/hyprland-fedora"
         }
     ];
 
