@@ -23,7 +23,7 @@ const Home = () => {
   const [showAbout, setShowAbout] = useState(false);
 
   const API_key = import.meta.env.VITE_WEATHER_API_KEY;
-  const city = "New Delhi,IN";
+
   const [time, setTime] = useState(
     new Date().toLocaleTimeString([], {
       hour: '2-digit',
@@ -41,11 +41,28 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_key}`)
-      .then(res => res.json())
-      .then((data: WeatherData) => setWeather(data))
-      .catch(err => console.error("Weather failed", err));
-  }, []);
+    if (!navigator.geolocation) {
+      console.log("Geolocation not supported");
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+
+        fetch(
+          `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${API_key}`
+        )
+          .then((res) => res.json())
+          .then((data: WeatherData) => setWeather(data))
+          .catch((err) => console.error("Weather failed", err));
+      },
+      (error) => {
+        console.error("Location permission denied", error);
+      }
+    );
+  }, [API_key]);
 
   return (
     <>
@@ -69,12 +86,14 @@ const Home = () => {
               className="h-13 w-20 ml-11 -mt-28 hover:text-white/70"
             />
             <p className="text-white ml-13 -mt-2">Projects</p>
+
             <div className="w-22 h-22 bg-white/40 rounded-xl ml-10"></div>
             <FaPhone
               onClick={() => setShowContact(true)}
               className="h-13 w-20 ml-11 -mt-28  hover:text-white/70 "
             />
             <p className="text-white ml-13 -mt-2">Contact</p>
+
             <div className="w-22 h-22 bg-white/40 rounded-xl ml-10"></div>
             <FaUser
               onClick={() => setShowAbout(true)}
