@@ -19,7 +19,7 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
         {
             title: "Hyprland Config",
             tags: ["Lua", "Bash", "Wayland"],
-            repo: "https://github.com/
+            repo: "https://github.com/"
         }
     ];
 
@@ -50,7 +50,6 @@ const Projects = ({ onClose }: { onClose: () => void }) => {
                             <a 
                                 href={project.repo} 
                                 target="_blank" 
-                                rel="noopener noreferrer"
                                 className="text-3xl hover:text-gray-400 transition-colors"
                             >
                                 <SiGithub />
