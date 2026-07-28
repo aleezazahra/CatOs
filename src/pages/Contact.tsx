@@ -21,7 +21,6 @@ const Contact = ({ onClose }: { onClose: () => void }) => {
                      <h1 className='font-roboto ml-55 mt-2 text-3xl'>Contact me</h1>
                      <div className='flex mt-2 -ml-23 flex-col'>
                      <p className='font-roboto ml-50 mt-5 '> email : aleezazahra67@gmail.com  </p>
-                     <p className='font-roboto ml-50 mt-5 '> Phone Number : +91-xxxx-xxxx </p>
                     
                 </div>
                 <h2 className='items-center mt-6 text-3xl text-center'>Socials</h2>
